@@ -2691,6 +2691,24 @@ public class OpcodeStack {
             result.setPC(dbc.getPC());
             push(result);
             return;
+        } else if (seen == Const.INVOKEVIRTUAL && "readLine".equals(methodName)
+                && "java/io/BufferedReader".equals(clsName)) {
+            pop();
+            Item result = new Item("Ljava/lang/String;");
+            result.setServletParameterTainted();
+            result.source = XFactory.createReferencedXMethod(dbc);
+            result.setPC(dbc.getPC());
+            push(result);
+            return;
+        } else if (seen == Const.INVOKEINTERFACE && "getString".equals(methodName)
+                && "java/sql/ResultSet".equals(clsName)) {
+            pop();
+            Item result = new Item("Ljava/lang/String;");
+            result.setServletParameterTainted();
+            result.source = XFactory.createReferencedXMethod(dbc);
+            result.setPC(dbc.getPC());
+            push(result);
+            return;
         } else if (seen == Const.INVOKESTATIC && "asList".equals(methodName) && "java/util/Arrays".equals(clsName)) {
             /* Item requestParameter = */pop();
             Item result = new Item(JAVA_UTIL_ARRAYS_ARRAY_LIST);
