@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exitpoints xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="exit_point_schema.xsd">
+	<!-- ANYTHING_IS_VALID(1), SANITIZED(2), LITERAL(4), STRING_CONCATENATION(8); -->
+
+	<!-- javax.servlet.http.HttpServletResponse -->
+	<exitpoint id="01">
+		<qualifiedname><![CDATA[javax.servlet.http.HttpServletResponse]]></qualifiedname>
+		<methodname>sendRedirect</methodname>
+		<parameters type="java.lang.String" rules="6" />
+	</exitpoint>
+	<exitpoint id="02">
+		<qualifiedname><![CDATA[javax.servlet.http.HttpServletResponse]]></qualifiedname>
+		<methodname>addCookie</methodname>
+		<parameters type="java.lang.Object" rules="6" />
+	</exitpoint>
+	<exitpoint id="03">
+		<qualifiedname><![CDATA[javax.servlet.http.HttpServletResponse]]></qualifiedname>
+		<methodname>addHeader</methodname>
+		<parameters type="java.lang.String" rules="1" /><parameters type="java.lang.String" rules="6" />
+	</exitpoint>
+	<exitpoint id="04">
+		<qualifiedname><![CDATA[javax.servlet.http.HttpServletResponse]]></qualifiedname>
+		<methodname>setHeader</methodname>
+		<parameters type="java.lang.String" rules="1" /><parameters type="java.lang.String" rules="6" />
+	</exitpoint>
+	<!-- javax.servlet.ServletContext -->
+	<exitpoint id="05">
+		<qualifiedname><![CDATA[javax.servlet.ServletContext]]></qualifiedname>
+		<methodname>getRequestDispatcher</methodname>
+		<parameters type="java.lang.String" rules="6" />
+	</exitpoint>
+</exitpoints>
