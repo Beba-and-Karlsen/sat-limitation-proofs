@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exitpoints xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="exit_point_schema.xsd">
+	<!-- ANYTHING_IS_VALID(1), SANITIZED(2), LITERAL(4), STRING_CONCATENATION(8); -->
+
+	<!-- java.sql.DriverManager -->
+	<exitpoint id="01">
+		<qualifiedname><![CDATA[java.sql.DriverManager]]></qualifiedname>
+		<methodname>getConnection</methodname>
+		<parameters type="java.lang.String" rules="2" />
+	</exitpoint>
+	<exitpoint id="02">
+		<qualifiedname><![CDATA[java.sql.DriverManager]]></qualifiedname>
+		<methodname>getConnection</methodname>
+		<parameters type="java.lang.String" rules="1" />
+		<parameters type="java.lang.String" rules="2" />
+		<parameters type="java.lang.String" rules="2" />
+	</exitpoint>
+	<!-- javax.security.auth.kerberos.KerberosKey -->
+	<exitpoint id="03">
+		<qualifiedname><![CDATA[javax.security.auth.kerberos.KerberosKey]]></qualifiedname>
+		<methodname>KerberosKey</methodname>
+		<parameters type="java.lang.Object" rules="1" />
+		<parameters type="java.lang.Object" rules="2" />
+		<parameters type="java.lang.Object" rules="1" />
+	</exitpoint>
+	<!-- java.net.PasswordAuthentication -->
+	<exitpoint id="04">
+		<qualifiedname><![CDATA[java.net.PasswordAuthentication]]></qualifiedname>
+		<methodname>PasswordAuthentication</methodname>
+		<parameters type="java.lang.Object" rules="1" />
+		<parameters type="java.lang.Object" rules="2" />
+	</exitpoint>
+</exitpoints>
