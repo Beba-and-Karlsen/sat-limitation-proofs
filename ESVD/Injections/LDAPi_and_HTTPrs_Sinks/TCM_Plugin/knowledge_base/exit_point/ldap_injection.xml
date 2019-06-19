@@ -62,8 +62,8 @@
 	<exitpoint id="09">
 		<qualifiedname><![CDATA[javax.naming.directory.DirContext]]></qualifiedname>
 		<methodname>search</methodname>
-		<parameters type="java.lang.String" rules="1" /><parameters type="java.lang.String" rules="6" /><parameters
-			type="java.lang.Object" rules="1" />
-		
+		<parameters type="java.lang.String" rules="1" />
+		<parameters type="java.lang.String" rules="6" />
+		<parameters type="java.lang.Object" rules="1" />
 	</exitpoint>
 </exitpoints>

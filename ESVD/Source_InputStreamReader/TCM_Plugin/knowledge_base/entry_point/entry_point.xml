@@ -392,12 +392,12 @@
 	<entrypoint id="81">
 		<qualifiedname>java.lang.Throwable</qualifiedname>
 		<methodname>getLocalizedMessage</methodname>
-	</entrypoint><!--java.net.URLConnection--><entrypoint id="82">
-		<qualifiedname>java.net.URLConnection</qualifiedname>
-		<methodname>getInputStream</methodname>
-</entrypoint>
-	<!--java.net.Socket--><entrypoint id="83">
-		<qualifiedname>java.net.Socket</qualifiedname>
-		<methodname>getInputStream</methodname>
+	</entrypoint>
+	<!-- java.io.InputStreamReader -->
+	<entrypoint id="81">
+		<qualifiedname>java.io.InputStreamReader</qualifiedname>
+		<methodname>InputStreamReader</methodname>
+		<parameters type="java.lang.Object" />
+		<parameters type="java.lang.String" />
 	</entrypoint>
 </entrypoints>

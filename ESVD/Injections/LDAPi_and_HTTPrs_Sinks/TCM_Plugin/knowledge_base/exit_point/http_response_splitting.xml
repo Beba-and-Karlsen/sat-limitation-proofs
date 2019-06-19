@@ -17,12 +17,14 @@
 	<exitpoint id="03">
 		<qualifiedname><![CDATA[javax.servlet.http.HttpServletResponse]]></qualifiedname>
 		<methodname>addHeader</methodname>
-		<parameters type="java.lang.String" rules="1" /><parameters type="java.lang.String" rules="6" />
+		<parameters type="java.lang.String" rules="1" />
+		<parameters type="java.lang.String" rules="6" />
 	</exitpoint>
 	<exitpoint id="04">
 		<qualifiedname><![CDATA[javax.servlet.http.HttpServletResponse]]></qualifiedname>
 		<methodname>setHeader</methodname>
-		<parameters type="java.lang.String" rules="1" /><parameters type="java.lang.String" rules="6" />
+		<parameters type="java.lang.String" rules="1" />
+		<parameters type="java.lang.String" rules="6" />
 	</exitpoint>
 	<!-- javax.servlet.ServletContext -->
 	<exitpoint id="05">
